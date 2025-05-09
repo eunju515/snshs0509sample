@@ -28,7 +28,10 @@ st.title("💬 ChatGPT와 대화하기")
 st.write("OpenAI GPT 모델과 대화할 수 있는 간단한 앱입니다. 🔥")
 
 # API 키 입력
-user_api_key = st.text_input("🔑 OpenAI API 키를 입력해주세요", type="password")
+#방법1 user_api_key = st.text_input("🔑 OpenAI API 키를 입력해주세요", type="password")
+#방법2 user_api_key ="이곳에 키를 직접 입력하면 키 입력필요없음- 그러나 위험!!"
+#방법3
+user_api_key = st.secrets["openai"]["api_key"]
 
 # 프롬프트 입력 및 결과 출력
 if user_api_key:
